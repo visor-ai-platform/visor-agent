@@ -8,7 +8,7 @@ WORKDIR /app
 COPY pyproject.toml /app/
 COPY src /app/src
 RUN pip install --upgrade pip \
-	&& pip install -e . \
+	&& pip install -e /app \
 	&& useradd --create-home --shell /usr/sbin/nologin visor
 USER visor
 
